@@ -23,13 +23,14 @@ public class SalesManager {
         return min;
     }
 
-    public long ObrezAverage() {
-        long ObrezAverage = 0;
+    public long statAverage() {
+        long statAverage = 0;
         long result = 0;
         for (long d : sales) {
             result += d;
-            ObrezAverage = (result - max() - min()) / (sales.length - 2);
+
         }
-        return ObrezAverage;
+        statAverage = (result - max() - min()) / (sales.length - 2);
+        return statAverage;
     }
 }
